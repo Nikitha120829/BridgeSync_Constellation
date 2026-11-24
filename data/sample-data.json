@@ -1,0 +1,27 @@
+{
+  "scenario": "synthetic_engine_supply_shortfall",
+  "notice": "Illustrative synthetic data only. Not an actual company incident or live ERP record.",
+  "buyer": {
+    "organisation": "Example Vehicle Manufacturer",
+    "purchase_order_id": "PO-DEMO-1001",
+    "item": "Engine Unit",
+    "required_quantity": 1000,
+    "required_by": "2026-12-15"
+  },
+  "supplier": {
+    "organisation": "Example Engine Supplier",
+    "item": "Engine Unit",
+    "available_quantity_by_deadline": 700,
+    "delivery_commitment_date": "2026-12-15"
+  },
+  "expected_rule_result": {
+    "unfulfilled_quantity": 300,
+    "exception_type": "quantity_shortfall",
+    "possible_responses": [
+      "partial_delivery_and_backorder",
+      "request_expedited_supply",
+      "check_approved_alternative_supplier",
+      "consider_production_rescheduling"
+    ]
+  }
+}
