@@ -1,0 +1,18 @@
+{
+  "name": "bridgesync-constellation",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "workspaces": [
+    "apps/web",
+    "apps/api"
+  ],
+  "scripts": {
+    "dev:web": "npm run dev --workspace @bridgesync/web",
+    "dev:api": "npm run dev --workspace @bridgesync/api",
+    "dev:all": "powershell.exe -NoProfile -ExecutionPolicy RemoteSigned -File scripts/dev/start.ps1",
+    "build": "npm run build --workspace @bridgesync/web",
+    "test": "npm run test --workspace @bridgesync/api",
+    "seed": "npm run seed --workspace @bridgesync/api"
+  }
+}

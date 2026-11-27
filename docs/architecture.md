@@ -45,4 +45,8 @@ MCP standardises how the application discovers and invokes tools. It does not it
 
 ## Prototype boundary
 
-The initial demonstration should use synthetic buyer and supplier systems. It should not be represented as a live connection to Toyota, BMW, SAP, Oracle or any other real enterprise system unless such a connection has been authorised and tested.
+The initial demonstration uses synthetic Apex Motors and Nova Components systems. It is not a live connection to SAP, Oracle or any other enterprise system unless such a connection has been authorised and tested.
+
+## Implemented Part 1 boundary
+
+The local application includes authenticated company workspaces, server-enforced company and role access, and company-scoped buyer and supplier dashboards backed by MongoDB. Procurement workflows, Gemini responses, MCP integrations and deployment are outside this Part 1 publication.
